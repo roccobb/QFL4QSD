@@ -1,41 +1,55 @@
 # QFL4QSD
 
-This repository contains the code and experiments for the paper **"Quantum Federated Learning for Noisy and Imbalanced State Discrimination"** submitted to the **3rd International Workshop on AI for Quantum and Quantum for AI (AIQxQIA 2025)**.
+This repository contains code and experiments related to **Quantum Federated Learning (QFL) for Quantum State Discrimination (QSD)**.
 
-The work explores how **Quantum Federated Learning (QFL)** can be applied to mitigate the effects of data imbalance and depolarizing noise in the task of **Quantum State Discrimination (QSD)**. This repository provides the Jupyter notebooks used to generate the experiments and plots included in the paper.
+The project originated from the paper  
+**"Quantum Federated Learning for Noisy and Imbalanced State Discrimination"** (https://ceur-ws.org/Vol-4153/paper5.pdf),  
+presented at the **3rd International Workshop on AI for Quantum and Quantum for AI (AIQxQIA 2025)**,  
+and has since been **extended with additional experiments and analyses** that form the basis of a
+journal article currently under submission to **Quantum Machine Intelligence**.
+
+The repository is organized to clearly separate the **original workshop experiments** from the **new experimental results** introduced in the journal version.
 
 
 ## Repository Structure
-```
-QFL4QSD/
-├── nb/
-│   ├── Imbalance.ipynb   # Experiments on imbalanced datasets
-│   └── DepoNoise.ipynb   # Experiments on imbalanced + noisy datasets
-├── figs/                 # Output plots used in the paper
-├── requirements.txt      # Python dependencies
-└── README.md             # This file
+
+```QFL4QSD/
+├── AIQxQIA/ # Material related to the AIQxQIA workshop paper
+│ ├── nb/ # Jupyter notebooks for workshop experiments
+│ │ ├── Imbalance.ipynb
+│ │ └── DepoNoise.ipynb
+│ └── figs/ # Figures used in the workshop paper
+│
+├── nb/ # Jupyter notebooks for journal-paper experiments
+│ ├── SETUP_*.ipynb # Imbalance experiments for different setups
+│ ├── Noise Setups # Noise-related experiments
+│ ├── Quantum Computer # Experiments on real quantum computer
+│ └── Scaled Problems # Scaled-up experiments
+│
+├── figs/ # Figures generated for the journal article
+├── requirements.txt # Python dependencies
+└── README.md # This file
 ```
 
-## Running Experiments with Jupyter Lab
 
-To run the experiments using **Jupyter Lab**, follow these steps:
+## Running Experiments with Jupyter Lab To run the experiments using **Jupyter Lab**, follow these steps: 
 1. **Create a virtual environment**
 ```bash
-   python3 -m venv .venv
+python3 -m venv .venv
 ```
-2. **Activate the virtual environment**
+3. **Activate the virtual environment**
 ```bash
-   source .venv/bin/activate
+source .venv/bin/activate
 ```
-3. **Install the required dependencies**
+5. **Install the required dependencies**
 ```bash
 pip install -r requirements.txt
 ```
-4. **Install the virtual environment as a Jupyter kernel**
+6. **Install the virtual environment as a Jupyter kernel**
 ```bash
 python -m ipykernel install --user --name=qfl4qsd
 ```
-5. **Launch Jupyter Lab and select the qfl4qsd kernel**
+7. **Launch Jupyter Lab and select the qfl4qsd kernel**
 ```bash
 jupyter lab
 ```
